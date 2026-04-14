@@ -126,16 +126,16 @@ export default function Dashboard() {
       </Head>
 
       <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-8">
-            <h1 className="text-xl font-bold text-white tracking-wide">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-0 md:h-16 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-8 w-full md:w-auto">
+            <h1 className="text-xl font-bold text-white tracking-wide w-full text-center md:text-left">
               SU<span className="text-blue-500">Sync</span>
             </h1>
             
-            <div className="flex space-x-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
+            <div className="flex space-x-1 bg-slate-950 p-1 rounded-lg border border-slate-800 w-full md:w-auto overflow-x-auto scrollbar-hide">
               <button
                 onClick={() => setActiveTab('operacao')}
-                className={`px-5 py-1.5 text-sm font-medium rounded-md transition-all ${
+                className={`px-4 sm:px-5 py-1.5 text-xs sm:text-sm font-medium rounded-md transition-all whitespace-nowrap flex-1 md:flex-none ${
                   activeTab === 'operacao' 
                     ? 'bg-slate-800 text-white shadow-sm' 
                     : 'text-slate-400 hover:text-slate-200'
@@ -145,7 +145,7 @@ export default function Dashboard() {
               </button>
               <button
                 onClick={() => setActiveTab('dashboards')}
-                className={`px-5 py-1.5 text-sm font-medium rounded-md transition-all ${
+                className={`px-4 sm:px-5 py-1.5 text-xs sm:text-sm font-medium rounded-md transition-all whitespace-nowrap flex-1 md:flex-none ${
                   activeTab === 'dashboards' 
                     ? 'bg-slate-800 text-white shadow-sm' 
                     : 'text-slate-400 hover:text-slate-200'
@@ -155,28 +155,28 @@ export default function Dashboard() {
               </button>
               <button
                 onClick={() => setActiveTab('alertas')}
-                className={`px-5 py-1.5 text-sm font-medium rounded-md transition-all flex items-center gap-2 ${
+                className={`px-4 sm:px-5 py-1.5 text-xs sm:text-sm font-medium rounded-md transition-all whitespace-nowrap flex items-center justify-center gap-2 flex-1 md:flex-none ${
                   activeTab === 'alertas' 
                     ? 'bg-slate-800 text-white shadow-sm' 
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
-                Inteligência Operacional
+                Inteligência
                 {alerts.length > 0 && (
-                   <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+                   <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse hidden sm:block"></span>
                 )}
               </button>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 w-full md:w-auto justify-center md:justify-end">
              {alerts.length > 0 && activeTab !== 'alertas' && (
-               <div className="flex items-center gap-2 cursor-pointer bg-amber-500/10 text-amber-500 text-xs px-3 py-1.5 font-bold uppercase rounded-md border border-amber-500/20 hover:bg-amber-500/20 transition-colors" onClick={() => setActiveTab('alertas')}>
+               <div className="flex items-center gap-2 cursor-pointer bg-amber-500/10 text-amber-500 text-[10px] sm:text-xs px-2.5 sm:px-3 py-1.5 font-bold uppercase rounded-md border border-amber-500/20 hover:bg-amber-500/20 transition-colors whitespace-nowrap" onClick={() => setActiveTab('alertas')}>
                   <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                  {alerts.length} Alertas Ativos
+                  {alerts.length} Alertas <span className="hidden sm:inline">Ativos</span>
                </div>
              )}
-            <div className="text-xs font-semibold px-3 py-1.5 bg-slate-800 text-slate-300 rounded-lg">
+            <div className="text-[10px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1.5 bg-slate-800 text-slate-300 rounded-lg whitespace-nowrap">
               Painel de Avaliação
             </div>
           </div>
@@ -191,16 +191,16 @@ export default function Dashboard() {
         {activeTab === 'operacao' && (
           <div className="space-y-6 animate-in fade-in zoom-in-95 duration-200">
             
-            <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8 mt-2">
-              <div>
+            <header className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-8 mt-2 text-center md:text-left">
+              <div className="w-full">
                 <h2 className="text-2xl font-bold text-white mb-2">Gerenciamento de Profissionais</h2>
-                <p className="text-slate-400 max-w-2xl">
+                <p className="text-slate-400 max-w-2xl mx-auto md:mx-0">
                   Acompanhe a relação dos profissionais escalados, status temporal de ausências registradas e a predição determinística de risco do sistema.
                 </p>
               </div>
               <button 
                 onClick={simularNovaFalta}
-                className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all active:scale-95 group flex items-center gap-2 shrink-0 shadow-sm border border-blue-500/50"
+                className="px-6 py-3 md:px-5 md:py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all active:scale-95 group flex items-center justify-center gap-2 shrink-0 shadow-sm border border-blue-500/50 w-full md:w-auto"
               >
                 <span className="text-lg leading-none">+</span> Registrar Nova Ausência
               </button>
@@ -426,22 +426,22 @@ export default function Dashboard() {
                     <p className="text-xs text-slate-500">Mapeador reativo que captura desvios iminentes baseado nas faltas passadas e futuras.</p>
                   </div>
                   
-                  <div className="flex bg-slate-950 p-1.5 rounded-lg border border-slate-800 shadow-inner">
+                  <div className="flex bg-slate-950 p-1.5 rounded-lg border border-slate-800 shadow-inner w-full md:w-auto overflow-x-auto scrollbar-hide">
                     <button 
                       onClick={() => setAlertTab('pessoas')} 
-                      className={`px-4 py-2 text-sm font-bold rounded-md transition-all flex items-center gap-2 ${alertTab === 'pessoas' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                      className={`px-4 py-2 text-sm font-bold rounded-md transition-all flex items-center justify-center gap-2 whitespace-nowrap flex-1 md:flex-none ${alertTab === 'pessoas' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
                     >
                       Pessoas <span className={`px-1.5 py-0.5 rounded text-xs ${pessoasAlerts.length > 0 ? 'bg-rose-500 text-white' : 'bg-slate-900 text-slate-500'}`}>{pessoasAlerts.length}</span>
                     </button>
                     <button 
                       onClick={() => setAlertTab('turnos')} 
-                      className={`px-4 py-2 text-sm font-bold rounded-md transition-all flex items-center gap-2 ${alertTab === 'turnos' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                      className={`px-4 py-2 text-sm font-bold rounded-md transition-all flex items-center justify-center gap-2 whitespace-nowrap flex-1 md:flex-none ${alertTab === 'turnos' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
                     >
                       Turnos <span className={`px-1.5 py-0.5 rounded text-xs ${turnosAlerts.length > 0 ? 'bg-amber-500 text-white' : 'bg-slate-900 text-slate-500'}`}>{turnosAlerts.length}</span>
                     </button>
                     <button 
                       onClick={() => setAlertTab('setores')} 
-                      className={`px-4 py-2 text-sm font-bold rounded-md transition-all flex items-center gap-2 ${alertTab === 'setores' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+                      className={`px-4 py-2 text-sm font-bold rounded-md transition-all flex items-center justify-center gap-2 whitespace-nowrap flex-1 md:flex-none ${alertTab === 'setores' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
                     >
                       Setores <span className={`px-1.5 py-0.5 rounded text-xs ${setoresAlerts.length > 0 ? 'bg-amber-500 text-white' : 'bg-slate-900 text-slate-500'}`}>{setoresAlerts.length}</span>
                     </button>
