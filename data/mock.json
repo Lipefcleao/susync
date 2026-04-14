@@ -1,0 +1,13 @@
+{
+  "escalas": [
+    { "id": 1, "profissional": "Dr. Fernando Almeida", "especialidade": "Clínico Geral", "data": "2026-04-15", "turno": "Manhã", "status": "Confirmado" },
+    { "id": 2, "profissional": "Dra. Letícia Costa", "especialidade": "Pediatria", "data": "2026-04-15", "turno": "Tarde", "status": "Ausente" },
+    { "id": 3, "profissional": "Dr. Roberto Santos", "especialidade": "Ortopedia", "data": "2026-04-16", "turno": "Noite", "status": "Confirmado" },
+    { "id": 4, "profissional": "Dra. Aline Souza", "especialidade": "Ginecologia", "data": "2026-04-16", "turno": "Manhã", "status": "Substituição" }
+  ],
+  "estatisticas": {
+    "taxaAbsenteismo": "8.5%",
+    "faltasMes": 12,
+    "coberturaPlantao": "94%"
+  }
+}

@@ -1,0 +1,10 @@
+[
+  { "id": "a1", "shiftId": "s6", "professionalId": "p6", "reason": "Atraso no trânsito", "status": "Injustificado", "reportedOn": "2026-04-15T22:10:00Z" },
+  { "id": "a2", "shiftId": "s9", "professionalId": "p9", "reason": "Motivos de saúde", "status": "Justificado", "reportedOn": "2026-04-16T18:05:00Z" },
+  { "id": "a3", "shiftId": "s13", "professionalId": "p13", "reason": "Problema familiar", "status": "Em Análise", "reportedOn": "2026-04-17T21:30:00Z" },
+  { "id": "a4", "shiftId": "s19", "professionalId": "p19", "reason": "Fadiga Crônica", "status": "Injustificado", "reportedOn": "2026-04-19T22:45:00Z" },
+  { "id": "a5", "shiftId": "s22", "professionalId": "p6", "reason": "Não compareceu (Reincidência)", "status": "Injustificado", "reportedOn": "2026-04-19T23:15:00Z" },
+  { "id": "a6", "shiftId": "s34", "professionalId": "p24", "reason": "Atraso prolongado", "status": "Injustificado", "reportedOn": "2026-04-13T23:55:00Z" },
+  { "id": "a7", "shiftId": "s40", "professionalId": "p30", "reason": "Emissão de Atestado", "status": "Em Análise", "reportedOn": "2026-04-19T10:20:00Z" },
+  { "id": "a8", "shiftId": "s51", "professionalId": "p3", "reason": "Não localizado", "status": "Em Análise", "reportedOn": "2026-04-14T08:15:00Z" }
+]
