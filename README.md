@@ -1,40 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# SUSync 🚑📊
 
-## Getting Started
+## 💡 Visão Geral
 
-First, run the development server:
+O **SUSync** é uma aplicação web desenvolvida para apoiar a gestão de escalas e o monitoramento de absenteísmo em ambientes de saúde pública, como a Central de Regulação do SUS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+A solução simula, de forma interativa, como gestores podem identificar padrões de ausência, antecipar riscos e tomar decisões mais rápidas e eficientes.
+
+---
+
+## 🎯 Problema
+
+A Central de Regulação enfrenta altos índices de absenteísmo de profissionais, o que gera:
+
+* sobrecarga das equipes presentes
+* desorganização das escalas
+* aumento no tempo de resposta
+* dificuldade na tomada de decisão
+
+Além disso, a ausência de ferramentas analíticas dificulta a identificação de padrões e ações preventivas.
+
+---
+
+## 🚀 Solução
+
+O SUSync propõe uma plataforma simples e intuitiva que permite:
+
+* visualizar profissionais e suas escalas
+* monitorar ocorrências de absenteísmo
+* calcular risco de ausência por profissional
+* gerar alertas automáticos
+* apresentar insights acionáveis para gestão
+
+Tudo isso em uma interface web acessível e sem necessidade de instalação.
+
+---
+
+## 🧠 Diferencial
+
+O principal diferencial do SUSync é o uso de um **motor de decisão baseado em regras (IA explicável)** que permite:
+
+* identificar padrões de faltas
+* calcular risco de absenteísmo em tempo real
+* gerar insights claros para gestores
+
+Para o protótipo, utilizamos dados simulados. A arquitetura foi pensada para evoluir para modelos preditivos com dados reais.
+
+---
+
+## ⚙️ Como Funciona
+
+A aplicação é dividida em duas áreas principais:
+
+### 🔹 Operação
+
+* tabela de profissionais
+* visualização de faltas e turnos
+* score de risco por profissional
+
+### 🔹 Dashboards
+
+* indicadores de absenteísmo
+* gráficos por turno e profissional
+* alertas automáticos
+* insights estratégicos
+
+---
+
+## 🎮 Simulação (Modo Demo)
+
+O sistema utiliza dados simulados e permite testar cenários reais através de botões:
+
+* **Simular ausência pontual** → impacto leve
+* **Simular padrão de faltas** → tendência de risco
+* **Simular caso crítico** → cenário de alto risco
+
+Essas interações atualizam automaticamente:
+
+* dashboard
+* risco
+* alertas
+* insights
+
+---
+
+## 🧩 Arquitetura
+
+O SUSync foi desenvolvido como uma aplicação **frontend-only**, focada em velocidade e confiabilidade para demonstração.
+
+### Tecnologias utilizadas:
+
+* Next.js
+* React
+* Tailwind CSS
+
+### Estrutura:
+
+```
+/data       → dados simulados (JSON)
+/lib        → lógica de negócio (métricas, risco, alertas)
+/pages      → páginas da aplicação
+/components → componentes de UI
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🔮 Evolução Futura
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+A solução foi pensada para evoluir facilmente para um ambiente real:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+* integração com banco de dados
+* conexão com sistemas do SUS
+* ingestão de dados históricos
+* uso de machine learning para previsão avançada
+* autenticação e múltiplos usuários
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Deploy
 
-To learn more about Next.js, take a look at the following resources:
+A aplicação está hospedada via Vercel e pode ser acessada diretamente pelo navegador.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 Como Executar Localmente
 
-## Deploy on Vercel
+```bash
+# instalar dependências
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# rodar o projeto
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+## 🎤 Contexto
+
+Este projeto foi desenvolvido como parte de um hackathon, com foco em:
+
+* impacto social
+* viabilidade no contexto do SUS
+* simplicidade de implementação
+* clareza na tomada de decisão
+
+---
+
+## 👨‍💻 Autor
+
+Projeto desenvolvido para fins de prototipação e validação de solução em ambiente de inovação.
+
+---
+
+## 📌 Licença
+
+Este projeto é apenas um protótipo acadêmico e demonstrativo.
